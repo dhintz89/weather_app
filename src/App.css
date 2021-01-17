@@ -1,14 +1,8 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -17,12 +11,54 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
 }
 
-.weatherCard {
+.todayCard {
   background-color: #fff;
-  max-width: 500px;
+  width: 95%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #000;
+}
+
+.todaysDay {
+  font-size: 1.7em;
+  text-decoration: underline;
+}
+
+.todayCard > img.weatherIcon {
+  width: 60%;
+  max-width: 7.5em;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  align-content: center;
+  padding: .83333%
+}
+
+.forecastCard {
+  background-color: #fff;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  margin: .5%;
+}
+
+.day {
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.weatherIcon {
+  width: 6em;
+  margin: 8px;
 }
