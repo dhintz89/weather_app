@@ -35,7 +35,7 @@ function App() {
       dayOfWeek: "Tue",
       airTemperature: 25,
       cloudCover: 20,
-      precipitation: 2,
+      precipitation: 200,
       windSpeed: 5
     },
     day3: {
@@ -48,7 +48,7 @@ function App() {
     day4: {
       dayOfWeek: "Thurs",
       airTemperature: 25,
-      cloudCover: 20,
+      cloudCover: 55,
       precipitation: 2,
       windSpeed: 5
     },
