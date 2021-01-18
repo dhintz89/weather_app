@@ -71,6 +71,7 @@ function App() {
         <Card key="day4" forecast={forecasts.day4} />
         <Card key="day5" forecast={forecasts.day5} />
       </div>
+      <br/>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import GLOBAL from './globalVars.js';
+import Clock from './Clock';
 
 const TodayCard = props => {
   let cloud = props.forecast.cloudCover;
@@ -19,11 +20,12 @@ const TodayCard = props => {
 
   return (
     <div className="todayCard">
+      <Clock/>
       <span className="todaysDay">Today</span>
       <img className="weatherIcon" alt="Sunny" src={icon}/>
       <h3>{props.forecast.airTemperature} {String.fromCharCode(176)}C</h3>
-      <p>Precipitation: {props.forecast.precipitation}</p>
-      <p>Wind Speed: {props.forecast.windSpeed}</p>
+      <span>Precipitation: {props.forecast.precipitation}mm</span>
+      <span>Wind Speed: {props.forecast.windSpeed}m/s</span>
     </div>
   )
 }

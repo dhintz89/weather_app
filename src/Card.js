@@ -20,7 +20,7 @@ const Card = props => {
   return (
     <div className="forecastCard">
       <span className="day">{props.forecast.dayOfWeek}</span>
-      <img className="weatherIcon" alt="Sunny" src={icon}>{/*depends on data*/}</img>
+      <img className="weatherIcon" alt="Sunny" src={icon}/>
       <h3>{props.forecast.airTemperature} {String.fromCharCode(176)}C</h3>
     </div>
   )
