@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import './App.css';
 import Card from './Card.js';
 import TodayCard from './TodayCard.js';
@@ -12,21 +13,63 @@ import TodayCard from './TodayCard.js';
 // cloudCover (%): <50
 // visibility (km): >12km
 // currentSpeed (meters/sec): 
-// precipitation: 0
-
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API_URL = "https://api.stormglass.io/v2";
+// precipitation: 0mm/day
 
 function App() {
+  const [forecasts, setForecasts] = useState({
+    day0: {
+      dayOfWeek: "Sun",
+      airTemperature: 25,
+      cloudCover: 25,
+      precipitation: 12,
+      windSpeed: 5
+    },
+    day1: {
+      dayOfWeek: "Mon",
+      airTemperature: 28,
+      cloudCover: 20,
+      precipitation: 2,
+      windSpeed: 5
+    },
+    day2: {
+      dayOfWeek: "Tue",
+      airTemperature: 25,
+      cloudCover: 20,
+      precipitation: 2,
+      windSpeed: 5
+    },
+    day3: {
+      dayOfWeek: "Wed",
+      airTemperature: 25,
+      cloudCover: 20,
+      precipitation: 2,
+      windSpeed: 5
+    },
+    day4: {
+      dayOfWeek: "Thurs",
+      airTemperature: 25,
+      cloudCover: 20,
+      precipitation: 2,
+      windSpeed: 5
+    },
+    day5: {
+      dayOfWeek: "Fri",
+      airTemperature: 25,
+      cloudCover: 20,
+      precipitation: 2,
+      windSpeed: 5
+    }
+  });
+
   return (
     <div className="App-body">
-      <TodayCard cloudCover="20%" airTemperature="25" precipitation="2" windSpeed="5" />
+      <TodayCard key="day0" forecast={forecasts.day0} />
       <div className="forecast">
-        <Card day="Mon" />
-        <Card day="Tue" />
-        <Card day="Wed" />
-        <Card day="Thu" />
-        <Card day="Fri" />
+        <Card key="day1" forecast={forecasts.day1} />
+        <Card key="day2" forecast={forecasts.day2} />
+        <Card key="day3" forecast={forecasts.day3} />
+        <Card key="day4" forecast={forecasts.day4} />
+        <Card key="day5" forecast={forecasts.day5} />
       </div>
     </div>
   );
